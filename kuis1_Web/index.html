@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            background: linear-gradient(to right, #a133ff, #ff3366);
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+        }
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons a {
+            display: block;
+            background: white;
+            color: black;
+            padding: 15px;
+            margin: 10px;
+            width: 500px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .icon-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .icon {
+            width: 30px;
+            height: 30px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" onclick="navigate('home')">Home</a>
+        <a href="jadwal.html" onclick="navigate('jadwal')">Jadwal</a>
+    </div>
+
+    <div class="container" id="home">
+        <img src="poppo.jpg" alt="Profile" class="profile-img">
+        <h2>ALEX ZACCARIA</h2>
+        <div class="buttons">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWmufjzTbRBWrfI_OVGr5umtIOas9Ug84Ow-1CQOf39bWrdA/viewform">gform pengumpulan</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWmufjzTbRBWrfI_OVGr5umtIOas9Ug84Ow-1CQOf39bWrdA/viewform">gform pengumpulan</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWmufjzTbRBWrfI_OVGr5umtIOas9Ug84Ow-1CQOf39bWrdA/viewform">gform pengumpulan</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWmufjzTbRBWrfI_OVGr5umtIOas9Ug84Ow-1CQOf39bWrdA/viewform">gform pengumpulan</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWmufjzTbRBWrfI_OVGr5umtIOas9Ug84Ow-1CQOf39bWrdA/viewform">gform pengumpulan</a>
+        </div>
+        
+        <div class="icon-list">
+            <a href="https://www.facebook.com" class="icon">📘</a>
+            <a href="https://www.twitter.com" class="icon">🐦</a>
+            <a href="https://www.instagram.com" class="icon">📷</a>
+            <a href="https://www.spotify.com" class="icon">🎵</a>
+            <a href="https://www.youtube.com" class="icon">🎥</a>
+            <a href="mailto:example@example.com" class="icon">✉️</a>
+        </div>
+    </div>
+
+    <div class="container" id="jadwal" style="display: none;">
+        <h2>Jadwal Kegiatan</h2>
+        <p>Belum ada jadwal yang ditambahkan.</p>
+    </div>
+
+    <script>
+        function navigate(page) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('jadwal').style.display = 'none';
+            document.getElementById(page).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
